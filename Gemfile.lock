@@ -63,6 +63,7 @@ GEM
     arel (9.0.0)
     autoprefixer-rails (9.5.0)
       execjs
+    aws_cf_signer (0.1.3)
     bindex (0.5.0)
     bootsnap (1.4.1)
       msgpack (~> 1.0)
@@ -85,6 +86,9 @@ GEM
     chromedriver-helper (2.1.1)
       archive-zip (~> 0.10)
       nokogiri (~> 1.8)
+    cloudinary (1.11.1)
+      aws_cf_signer
+      rest-client
     coffee-rails (4.2.2)
       coffee-script (>= 2.2.0)
       railties (>= 4.0.0)
@@ -96,6 +100,8 @@ GEM
     crass (1.0.4)
     datetime_picker_rails (0.0.7)
       momentjs-rails (>= 2.8.1)
+    domain_name (0.5.20180417)
+      unf (>= 0.0.5, < 1.0.0)
     dotenv (2.7.2)
     dotenv-rails (2.7.2)
       dotenv (= 2.7.2)
@@ -105,6 +111,8 @@ GEM
     ffi (1.10.0)
     globalid (0.4.2)
       activesupport (>= 4.2.0)
+    http-cookie (1.0.3)
+      domain_name (~> 0.5)
     i18n (1.6.0)
       concurrent-ruby (~> 1.0)
     io-like (0.3.0)
@@ -151,6 +159,7 @@ GEM
     msgpack (1.2.9)
     multi_json (1.13.1)
     mysql2 (0.5.2)
+    netrc (0.11.0)
     nio4r (2.3.1)
     nokogiri (1.10.2)
       mini_portile2 (~> 2.4.0)
@@ -189,6 +198,10 @@ GEM
     rb-inotify (0.10.0)
       ffi (~> 1.0)
     regexp_parser (1.3.0)
+    rest-client (2.0.2)
+      http-cookie (>= 1.0.2, < 2.0)
+      mime-types (>= 1.16, < 4.0)
+      netrc (~> 0.8)
     ruby_dep (1.5.0)
     rubyzip (1.2.2)
     sass (3.7.3)
@@ -225,6 +238,9 @@ GEM
       thread_safe (~> 0.1)
     uglifier (4.1.20)
       execjs (>= 0.3.0, < 3)
+    unf (0.1.4)
+      unf_ext
+    unf_ext (0.0.7.5)
     web-console (3.7.0)
       actionview (>= 5.0)
       activemodel (>= 5.0)
@@ -247,6 +263,7 @@ DEPENDENCIES
   capybara (>= 2.15)
   carrierwave
   chromedriver-helper
+  cloudinary
   coffee-rails (~> 4.2)
   dotenv-rails
   jbuilder (~> 2.5)
