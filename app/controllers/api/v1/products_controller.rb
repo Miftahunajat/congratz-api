@@ -2,7 +2,8 @@ module Api
   module V1
     class ProductsController < ApplicationController
       def index
-        @product = Product.all
+        @products = Product.all
+        render json: @products
       end
 
       def create

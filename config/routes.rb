@@ -4,15 +4,20 @@ Rails.application.routes.draw do
     resources :users
     resources :products
     resources :product_categories
+    resources :creatives
 
     root to: 'products#index'
   end
-  root 'home#index'
+  root 'admin/users#index'
 
   namespace :api do
     namespace :v1 do
-      resources :users
-      resources :product_categories
+      resources :users do
+        resources :creatives
+      end
+      resources :product_categories do
+        resources :products
+      end
       resources :products
     end
   end

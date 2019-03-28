@@ -6,4 +6,5 @@ class User < ApplicationRecord
     :email,
     :phone_number
   )
+  has_many :creatives
 end

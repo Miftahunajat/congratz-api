@@ -29,7 +29,7 @@ module Api
 
       def show
         @product_category = ProductCategory.find(params[:id])
-        render json: @product_category, status: :ok
+        render json: @product_category, include: :products, status: :ok
       end
     end
   end
