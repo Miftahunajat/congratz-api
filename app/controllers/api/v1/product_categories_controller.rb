@@ -23,9 +23,13 @@ module Api
         end
       end
 
-
       def product_category_params
         params.require(:product_category).permit!
+      end
+
+      def show
+        @product_category = ProductCategory.find(params[:id])
+        render json: @product_category, status: :ok
       end
     end
   end
