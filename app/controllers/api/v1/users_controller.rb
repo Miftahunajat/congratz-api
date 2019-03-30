@@ -23,6 +23,12 @@ module Api
         end
       end
 
+      def index
+        @users = User.all
+        render json: @users
+      end
+
+
       def user_params
         params.require(:user).permit!
       end

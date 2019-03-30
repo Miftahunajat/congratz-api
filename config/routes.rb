@@ -14,6 +14,10 @@ Rails.application.routes.draw do
     namespace :v1 do
       resources :users do
         resources :creatives
+        scope module: :users do
+          resources :favorites
+          resources :products
+        end
       end
       resources :product_categories do
         resources :products
