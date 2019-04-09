@@ -38,6 +38,14 @@ module Api
         render json: @user, status: :bad_request
       end
 
+      def available_username
+        @user = User.find_by(username: params[:username])
+        if @user.present?
+          render json: { status: false, message: "Username has been taken" }, status: :bad_request
+        else
+          render json: { status: true, message: "Username Available" }, status: :ok
+        end
+      end
     end
   end
 end

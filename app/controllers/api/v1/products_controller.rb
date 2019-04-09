@@ -3,7 +3,7 @@ module Api
     class ProductsController < ApplicationController
       def index
         @products = Product.all
-        render json: @products
+        render json: @products, include: :product_category
       end
 
       def create
