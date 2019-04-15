@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      post 'users/check_username', to: 'users#check_username'
+      post 'users/check_username', to: 'users#available_username'
       resources :users do
         resources :creatives
         scope module: :users do
