@@ -274,7 +274,6 @@ DEPENDENCIES
   cloudinary
   coffee-rails (~> 4.2)
   dotenv-rails
-  execjs
   jbuilder (~> 2.5)
   listen (>= 3.0.5, < 3.2)
   mysql2
