@@ -5,6 +5,7 @@ Rails.application.routes.draw do
     resources :products
     resources :product_categories
     resources :creatives
+    resources :banners
 
     root to: 'products#index'
   end
@@ -12,6 +13,7 @@ Rails.application.routes.draw do
 
   namespace :api do
     namespace :v1 do
+      resources :banners
       post 'users/check_username', to: 'users#available_username'
       resources :users do
         resources :creatives

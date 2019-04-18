@@ -10,7 +10,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_04_14_145306) do
+ActiveRecord::Schema.define(version: 2019_04_17_123033) do
+
+  create_table "banners", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "name", null: false
+    t.string "photo", null: false
+    t.string "url", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+  end
 
   create_table "carts", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.bigint "user_id"
@@ -85,8 +93,7 @@ ActiveRecord::Schema.define(version: 2019_04_14_145306) do
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "username", null: false
-    t.string "photo_url", null: false
-    t.string "id_photo_url", null: false
+    t.string "photo_url"
     t.string "email"
     t.string "phone_number", null: false
     t.datetime "created_at", null: false

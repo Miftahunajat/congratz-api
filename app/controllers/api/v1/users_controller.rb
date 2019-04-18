@@ -35,7 +35,7 @@ module Api
 
       def show
         @user = User.find(params[:id])
-        render json: @user, status: :bad_request
+        render json: @user, status: :ok
       end
 
       def available_username
